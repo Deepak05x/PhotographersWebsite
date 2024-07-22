@@ -67,3 +67,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+.h1{
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold
+}
+
+.h2{
+  @apply text-4xl font-bold
+}
+
+.h3{
+  @apply text-3xl font-bold
+}
+
+.h4{
+  @apply text-[22px] font-semibold
+}
+
+.subtitle{
+  @apply text-muted-foreground text-lg mb-8 font-light
+}
+
+.section-title{
+  @apply text-4xl text-primary font-bold relative w-max flex items-center justify-between gap-3
+}
+
+.badge{
+  @apply z-10 w-[250px] px-16 h-[90px] bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full items-center gap-x-4 flex
+}
