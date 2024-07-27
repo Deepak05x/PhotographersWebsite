@@ -98,10 +98,10 @@
 
 body::-webkit-scrollbar{
   width: 10px;
-  background-color: var(--primary);
+  background-color: var(--primary)
 }
 
 body::-webkit-scrollbar-thumb{
   width: 10px;
-  background-color: red
+  background-color: hsl(var(--primary))
 }
