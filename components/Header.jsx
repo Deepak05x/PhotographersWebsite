@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import Navbar from "./Navbar";
 import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Header = () => {
     const [header, setHeader] = useState(false);
@@ -21,7 +22,13 @@ const Header = () => {
     });
 
     return (
-        <header className={`${header ? "py-4 bg-white shadow-lg dark:bg-accent" : "py-6 dark:bg-transparent "} sticky top-0 z-30 transition-all `}>
+        <motion.header
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className={`${header ? "py-4 bg-white shadow-lg dark:bg-accent" : "py-6 dark:bg-transparent "} sticky top-0 z-30 transition-all `}
+        >
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <Logo />
@@ -38,7 +45,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-        </header>
+        </motion.header>
     );
 };
 

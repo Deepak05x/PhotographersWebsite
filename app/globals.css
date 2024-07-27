@@ -95,3 +95,13 @@
 .badge{
   @apply z-10 w-[250px] px-16 h-[90px] bg-primary dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-full items-center gap-x-4 flex
 }
+
+body::-webkit-scrollbar{
+  width: 10px;
+  background-color: var(--primary);
+}
+
+body::-webkit-scrollbar-thumb{
+  width: 10px;
+  background-color: red
+}

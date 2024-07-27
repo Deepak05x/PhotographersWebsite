@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { motion } from "framer-motion";
 
 const projectData = [
     {
@@ -62,10 +65,26 @@ const Gallery = () => {
     return (
         <section className="relative mb-12 xl:mb-48">
             <div className="container py-24 mx-auto">
-                <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">My Gallery</h2>
+                <motion.h2
+                    initial={{ y: -150, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+                    viewport={{ once: true }}
+                    className="section-title mb-8 xl:mb-16 text-center mx-auto"
+                >
+                    My Gallery
+                </motion.h2>
                 <div className="flex flex-col gap-12">
                     {projectData.map((project, index) => (
-                        <ProjectCard key={index} project={project} />
+                        <motion.div
+                            key={index}
+                            initial={{ x: index % 2 === 0 ? 150 : -150, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+                            viewport={{ once: true }}
+                        >
+                            <ProjectCard project={project} />
+                        </motion.div>
                     ))}
                 </div>
             </div>

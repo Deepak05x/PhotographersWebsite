@@ -1,4 +1,7 @@
+"use client";
+
 import { Smile, Scan, Bird } from "lucide-react";
+import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const servicesData = [
@@ -26,8 +29,22 @@ const Services = () => {
     return (
         <section className="mb-12 xl:mb-36">
             <div className="container mx-auto py-24">
-                <h2 className="section-title mb-6 xl:mb-24 text-center mx-auto">Our Services</h2>
-                <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
+                <motion.h2
+                    initial={{ y: 150, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+                    viewport={{ once: true }}
+                    className="section-title mb-6 xl:mb-24 text-center mx-auto"
+                >
+                    Our Services
+                </motion.h2>
+                <motion.div
+                    initial={{ y: 150, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 0.8, ease: "easeInOut" }}
+                    viewport={{ once: true }}
+                    className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8"
+                >
                     {servicesData.map((item, index) => (
                         <Card
                             key={index}
@@ -42,7 +59,7 @@ const Services = () => {
                             </CardContent>
                         </Card>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
