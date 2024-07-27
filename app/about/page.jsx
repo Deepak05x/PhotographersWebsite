@@ -37,7 +37,7 @@ const AboutPage = () => {
                     <div className="flex-1 flex flex-col justify-center">
                         <div className="text-lg mt-12 xl:mt-3">
                             <div className="text-center xl:text-left">
-                                <h3 className="h3 mb-4">Let's Plan Your Perfect Photoshoot</h3>
+                                <h3 className="h3 mb-4">Let&apos;s Plan Your Perfect Photoshoot</h3>
                                 <p className="subtitle max-w-xl mx-auto xl:max-0">
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur minus vero odio omnis, corporis, unde dolorem pariatur ut a numquam nulla enim rem sed,
                                     quibusdam obcaecati dolor quasi temporibus magni?
